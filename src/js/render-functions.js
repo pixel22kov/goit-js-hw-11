@@ -21,11 +21,23 @@ export const renderImages = images => {
         `<a class="gallery-item" href="${largeImageURL}">
           <div class="photo-wrapper">
             <img src="${webformatURL}" alt="${tags}" />
-            <div class="info-box">
-              <p><b>Likes</b> ${likes}</p>
-              <p><b>Views</b> ${views}</p>
-              <p><b>Comments</b> ${comments}</p>
-              <p><b>Downloads</b> ${downloads}</p>
+            <div class="info-wrapper">
+              <div class="info-box">
+                <h3 class="gallery-title">Likes</h3>
+                <p class="gallery-text">${likes}</p>
+              </div>
+              <div class="info-box">
+                <h3 class="gallery-title">Views</h3>
+                <p class="gallery-text">${views}</p>
+              </div>
+              <div class="info-box">
+                <h3 class="gallery-title">Comments</h3>
+                <p class="gallery-text">${comments}</p>
+              </div>
+              <div class="info-box">
+                <h3 class="gallery-title">Downloads</h3>
+                <p class="gallery-text">${downloads}</p>
+              </div>
             </div>
           </div>
         </a>`
