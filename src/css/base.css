@@ -112,10 +112,6 @@ img {
   justify-content: center;
 }
 
-.gallery-item {
-  width: 360px;
-    height: 200px;
-}
 
 .photo-wrapper{
     border: 1px solid #808080;
@@ -124,11 +120,22 @@ img {
 
 .info-box{
   display: flex;
-  justify-content: center;
-    text-align: center;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
-    color: #2e2f42;
+  justify-content: space-evenly;
+    
+}
+
+.gallery-titles{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.gallery-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
