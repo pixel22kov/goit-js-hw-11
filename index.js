@@ -2,10 +2,10 @@ import{a as h,i as n,S as g}from"./assets/vendor-DU6yh4ar.js";(function(){const 
           <div class="photo-wrapper">
             <img src="${a}" alt="${r}" />
             <div class="info-box">
-              <p><b>Likes:</b> ${i}</p>
-              <p><b>Views:</b> ${d}</p>
-              <p><b>Comments:</b> ${m}</p>
-              <p><b>Downloads:</b> ${f}</p>
+              <p><b>Likes</b> ${i}</p>
+              <p><b>Views</b> ${d}</p>
+              <p><b>Comments</b> ${m}</p>
+              <p><b>Downloads</b> ${f}</p>
             </div>
           </div>
         </a>`).join("");u.insertAdjacentHTML("beforeend",t),new g(".gallery a").refresh()},c=document.querySelector(".form"),S=document.querySelector(".form-input"),p=document.querySelector(".loader");function w(){p.classList.add("active")}function l(){p.classList.remove("active")}c.addEventListener("submit",s=>{s.preventDefault();const t=S.value.trim();if(!t){n.warning({message:"Please enter a valid search query!",position:"topRight"});return}v(),w(),L(t).then(o=>{if(l(),o.length===0){n.error({message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight"}),c.reset();return}q(o),c.reset()}).catch(o=>{l(),n.error({message:"An error occurred while fetching images. Please try again later.",position:"topRight"}),console.error(o)})});
