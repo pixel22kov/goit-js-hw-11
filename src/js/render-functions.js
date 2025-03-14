@@ -8,8 +8,7 @@ export const cleanGallery = () => {
 };
 
 export const renderImages = images => {
-  const markup = images
-    .map(
+  const markup = images.map(
       ({
         webformatURL,
         largeImageURL,
@@ -20,9 +19,9 @@ export const renderImages = images => {
         downloads,
       }) =>
         `<a class="gallery-item" href="${largeImageURL}">
-          <div class="photo-card">
+          <div class="photo-wrapper">
             <img src="${webformatURL}" alt="${tags}" />
-            <div class="info">
+            <div class="info-box">
               <p><b>Likes:</b> ${likes}</p>
               <p><b>Views:</b> ${views}</p>
               <p><b>Comments:</b> ${comments}</p>

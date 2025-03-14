@@ -17,11 +17,8 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -29,4 +26,109 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  padding: 36px 156px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.form-input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding: 8px 16px;
+  margin-bottom: 32px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.form-input::placeholder {
+  color: #808080;
+}
+
+.form-input:hover {
+  border: 1px solid #000;
+}
+
+.form-input:focus {
+  border: 1px solid #4e75ff;
+  
+}
+
+.form-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-btn:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 360px;
+    height: 200px;
+}
+
+.photo-wrapper{
+    border: 1px solid #808080;
+    
+}
+
+.info-box{
+  display: flex;
+  justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
 }
