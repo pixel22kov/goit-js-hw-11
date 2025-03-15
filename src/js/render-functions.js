@@ -2,6 +2,14 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
+const loader = document.querySelector('.loader');
+
+export function showLoader() {
+  loader.classList.remove('visually-hidden');
+}
+export function hideLoader() {
+  loader.classList.add('visually-hidden');
+}
 
 export const cleanGallery = () => {
   gallery.innerHTML = '';
@@ -18,7 +26,8 @@ export const renderImages = images => {
         comments,
         downloads,
       }) =>
-        `<a class="gallery-item" href="${largeImageURL}">
+      `<li class="gallery-item">
+        <a class="gallery-link" href="${largeImageURL}">
           <div class="photo-wrapper">
             <img src="${webformatURL}" alt="${tags}" />
             <div class="info-wrapper">
@@ -40,7 +49,8 @@ export const renderImages = images => {
               </div>
             </div>
           </div>
-        </a>`
+        </a>
+      </li>`
     )
     .join('');
 

@@ -1,19 +1,13 @@
-import { fetchImages } from './js/pixabay-api.js';
-import { renderImages, cleanGallery } from './js/render-functions.js';
-
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import { fetchImages } from './js/pixabay-api.js';
+import { renderImages, cleanGallery, showLoader, hideLoader } from './js/render-functions.js';
+
+
 const form = document.querySelector('.form');
 const input = document.querySelector('.form-input');
-const loader = document.querySelector('.loader');
 
-function showLoader() {
-  loader.classList.add('active');
-}
-function hideLoader() {
-  loader.classList.remove('active');
-}
 
 form.addEventListener('submit', event => {
   event.preventDefault();
