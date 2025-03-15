@@ -27,27 +27,26 @@ form.addEventListener('submit', event => {
 
   fetchImages(query)
     .then(images => {
-      hideLoader();
-      if (images.length === 0) {
-        iziToast.error({
-          message:
-            'Sorry, there are no images matching your search query. Please try again!',
-          position: 'topRight',
-        });
-        form.reset();
-        return;
-      }
+   if (images.length === 0) {
+     iziToast.error({
+       message: 'Sorry, there are no images matching your search query. Please try again!',
+       position: 'topRight',
+     });
+     form.reset();
+     return;
+   }
 
-      renderImages(images);
-      form.reset();
+    renderImages(images);
+    form.reset();
     })
     .catch(error => {
-      hideLoader();
-      iziToast.error({
-        message:
-          'An error occurred while fetching images. Please try again later.',
-        position: 'topRight',
-      });
-      console.error(error);
+    iziToast.error({
+     message: 'An error occurred while fetching images. Please try again later.',
+     position: 'topRight',
     });
+    console.error(error);
+  })
+    .finally(() => {
+      hideLoader(); 
+  });
 });

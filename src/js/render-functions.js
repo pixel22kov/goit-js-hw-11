@@ -27,7 +27,7 @@ export const renderImages = images => {
         downloads,
       }) =>
       `<li class="gallery-item">
-        <a class="gallery-link" href="${largeImageURL}">
+        <a class="gallery-link" href="${largeImageURL}" alt="${tags}">
           <div class="photo-wrapper">
             <img src="${webformatURL}" alt="${tags}" />
             <div class="info-wrapper">
